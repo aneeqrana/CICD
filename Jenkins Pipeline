@@ -1,0 +1,10 @@
+To create a jenkins job to integrate git with jenkins first you need to install Jenkins on the server run the jenkins.sh script once done setup jenkins 
+
+create a job by adding new item freestyle project  
+
+setup Source Code Management
+Git 
+
+enter repo URL 
+
+Credentials > jenkins > select your branch > save 
