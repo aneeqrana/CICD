@@ -1,0 +1,16 @@
+setup wordpress on docker container with docker compose file 
+
+run 
+docker-compose up -d 
+
+once done get inside the docker container to setup git on the app 
+
+docker ps 
+
+copy wordpress app container ID 
+
+docker exec -it containerID bash
+
+once in install git on the server 
+
+apt-get update && apt-get install -y git  now your docker container has been setup to push and pull from git now follow the git file to setup git on the contaiiner 
