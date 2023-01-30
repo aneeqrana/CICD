@@ -8,3 +8,5 @@ Git
 enter repo URL 
 
 Credentials > jenkins > select your branch > save 
+
+once the build is successful you can find the files on /var/lib/jenkins/workspace
