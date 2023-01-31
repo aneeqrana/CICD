@@ -1,3 +1,4 @@
+Developer Environment (local pc)
 setup wordpress on docker container with docker compose file 
 
 run 
@@ -13,4 +14,36 @@ docker exec -it containerID bash
 
 once in install git on the server 
 
-apt-get update && apt-get install -y git  now your docker container has been setup to push and pull from git now follow the git file to setup git on the contaiiner 
+apt-get update && apt-get install -y git  now your docker container has been setup to push and pull from git now follow the git file to setup git on the container 
+
+
+Dockerize the app on the server 
+
+Now on the EC2 server install docker from scratch as on the local machine I already had docker desktop installed so I only need to run docker compose to setup the application but on the instance I don't have docker so to do that we will run the command 
+
+sudo apt-get install docker.io
+
+this will install docker on the machine to test if it is running run the command 
+docker version 
+this will display the information for the server and client 
+
+to make docker run the commands without error we need to give docker the permissions to run commands 
+
+sudo usermod -a -G docker $USER
+
+
+to install docker compose on the server 
+
+mkdir -p ~/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+
+chmod +x ~/.docker/cli-plugins/docker-compose
+
+
+docker compose version
+
+
+
+once all done run the command 
+
+docker compose up -d 
