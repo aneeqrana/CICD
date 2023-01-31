@@ -12,14 +12,9 @@ Credentials > jenkins > select your branch > save
 once the build is successful you can find the files on /var/lib/jenkins/workspace
 
 
-now edit the job again and edit build steps to deploy the application to docker aswell 
+now edit the job again Execute shell and edit build steps to deploy the application to docker aswell  
 
 
-    Build the Docker image using the following command:
-
+ 
 docker build -t wordpress .
-
-    Run the Docker container using the following command:
-
-
 docker run -p 8000:80 -d wordpress --name wp-container
