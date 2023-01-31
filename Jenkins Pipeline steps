@@ -28,3 +28,9 @@ chmod 777 /var/lib/jenkins/workspace/wp-app
 
 sudo usermod -a -G docker jenkins
 sudo systemctl restart jenkins 
+
+
+to automate tasks that whenever dev pushes the code it will autodeploy 
+install plugin github integration 
+
+configure webhook on github 
