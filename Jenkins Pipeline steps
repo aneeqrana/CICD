@@ -33,4 +33,7 @@ sudo systemctl restart jenkins
 to automate tasks that whenever dev pushes the code it will autodeploy 
 install plugin github integration 
 
-configure webhook on github 
+configure webhook on github by adding by adding the pull request URL that would be of jenkins server IP   http://13.40.71.104:8080/github-webhook/
+
+
+once done go to configure job < build triggers and tick GitHub hook trigger for GITScm polling  and save changes 
