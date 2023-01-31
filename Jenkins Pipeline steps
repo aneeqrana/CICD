@@ -14,7 +14,17 @@ once the build is successful you can find the files on /var/lib/jenkins/workspac
 
 now edit the job again Execute shell and edit build steps to deploy the application to docker aswell  
 
+ Got to jenkins job
+Execute shell 
 
- 
+docker build . -t wordpress
+or 
 docker build -t wordpress .
 docker run -p 8000:80 -d wordpress --name wp-container
+
+if you face permissions error run 
+
+chmod 777 /var/lib/jenkins/workspace/wp-app 
+
+sudo usermod -a -G docker jenkins
+sudo systemctl restart jenkins 
