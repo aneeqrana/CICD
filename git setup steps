@@ -3,7 +3,12 @@ git add .
 
 git remote add origin https://github.com/aneeqrana/cicd.git
 
+  git config --global user.email "devops@xcellorate.com"
+  git config --global user.name "aneeqrana"
+
 git commit -m 'first commit'
+
+ 
 
 git config --global --add safe.directory /var/www/html
 git remote -v
