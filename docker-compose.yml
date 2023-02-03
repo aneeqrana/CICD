@@ -11,7 +11,6 @@ services:
       MYSQL_PASSWORD: Aneeq
   wordpress:
     image: wordpress:latest
-    volumes: ["./html:/var/www/html"]
     depends_on:
       - db
     ports:
