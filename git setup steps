@@ -3,8 +3,8 @@ git add .
 
 git remote add origin https://github.com/aneeqrana/cicd.git
 
-  git config --global user.email "devops@xcellorate.com"
-  git config --global user.name "aneeqrana"
+  git config --global user.email "email.com"
+  git config --global user.name "name"
 
 git commit -m 'first commit'
 
@@ -25,3 +25,9 @@ git push origin master
 
 git merge master
 
+
+if you still face errors even after adding the deploy key try this command 
+
+ssh-add ~/.ssh/ansible (path to the private key)
+
+then run the command again you might be asked to approve the key once its done it will be fine 
